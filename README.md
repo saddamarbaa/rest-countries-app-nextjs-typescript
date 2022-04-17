@@ -1,6 +1,6 @@
-# Front-end Mentor Rest Countries API challenge 
+# Front-End Mentor Rest Countries API Challenge
 
-Building Front-end Mentor Rest Countries API App challenge with React Js, Next Js, TypeScript, Tailwind CSS,
+Building Front-End Mentor Rest Countries API App Challenge with React Js, Next Js, TypeScript, Tailwind CSS,
 Heroicons, Vercel Hosting (a mobile-friendly) Made with developer experience first ESLint + Prettier + Lint-Staged + VSCode setup .
 
 # Table of contents
@@ -180,51 +180,15 @@ Build By Saddam Arbaa Project inspired by [ Frontend Mentor]  https://www.fronte
 
 ## Responsive on large screens - Home Page
 
-![image](https://user-images.githubusercontent.com/51326421/163708466-78429147-8d0b-422b-9872-b0e1a0599fd7.png)
-
-
-![image](https://user-images.githubusercontent.com/51326421/163708484-7cce7db8-39df-4357-ab91-a5007556d81d.png)
+![image](https://user-images.githubusercontent.com/51326421/163709926-491e18eb-49c3-464a-a389-a4dc3cf59f61.png)
 
 
 
-
-
-## Responsive on large screens - Home Page (Filter countries by Region)
-
-![image](https://user-images.githubusercontent.com/51326421/163709118-6991fd5f-8eaf-4469-9979-c72646c0989b.png)
-
-
-![image](https://user-images.githubusercontent.com/51326421/163709094-f0041730-839b-4c46-ab2a-464f7e666c34.png)
-
-
-![image](https://user-images.githubusercontent.com/51326421/163709074-b8cab621-381b-43ef-8331-84bd41ea4cea.png)
-
-
-![image](https://user-images.githubusercontent.com/51326421/163709060-9b1f26aa-a8a0-43ca-85e0-42e96bf985c2.png)
-
-
-
-![image](https://user-images.githubusercontent.com/51326421/163709109-686f1a58-a49d-4d28-8bb6-1cccb8473143.png)
+![image](https://user-images.githubusercontent.com/51326421/163709907-7f911c77-9e2a-4d4e-84c9-1d9600612fdf.png)
 
 
 
 
-
-
-## Responsive on tablet screens
-
-![image](https://user-images.githubusercontent.com/51326421/163708596-ef139e9a-e8eb-4e5e-ac17-5fc61ee4a16d.png)
-
-![image](https://user-images.githubusercontent.com/51326421/163708637-50e1cefd-546a-49a7-801d-234eb433e76a.png)
-
-
-
-## Responsive on mobile screens
-
-![image](https://user-images.githubusercontent.com/51326421/163708571-6ecff1ce-4395-4353-82fb-1230c06d672b.png)
-
-
-![image](https://user-images.githubusercontent.com/51326421/163708523-dc830f64-64bd-4ac5-9ad7-c9e07294cc6a.png)
 
 
 
@@ -254,11 +218,64 @@ Build By Saddam Arbaa Project inspired by [ Frontend Mentor]  https://www.fronte
 
 
 
-## Responsive on large screens Search Page - Home Page 
+##  Search Page
 
 ![image](https://user-images.githubusercontent.com/51326421/163709205-778b90f5-82d8-4b92-9122-a4996789369c.png)
 
 ![image](https://user-images.githubusercontent.com/51326421/163709248-42c5ce8f-9d7d-4f91-bc1a-230d8368c14f.png)
+
+
+
+
+
+## Filter countries by Region
+### Filter countries by Region (America)
+
+![image](https://user-images.githubusercontent.com/51326421/163710037-53450929-07e8-4e3c-9c5e-37815be262d4.png)
+
+
+### Filter countries by Region (Africa)
+
+![image](https://user-images.githubusercontent.com/51326421/163710107-cea352d2-102c-4253-8169-d49fde66b975.png)
+
+
+
+### Filter countries by Region (Asia)
+
+![image](https://user-images.githubusercontent.com/51326421/163710133-466d13f8-2c9c-4f21-81b9-802f2fd04ab6.png)
+
+
+### Filter countries by Region (Europe)
+
+![image](https://user-images.githubusercontent.com/51326421/163710184-b0a37141-76c2-4268-abb8-48d4124dd6c7.png)
+
+
+
+### Filter countries by Region (Oceania)
+
+![image](https://user-images.githubusercontent.com/51326421/163710230-b0981530-8cf2-48a3-b6b2-8a8537f943f4.png)
+
+
+
+
+
+
+## Responsive on tablet screens
+
+![image](https://user-images.githubusercontent.com/51326421/163710002-66c763d0-3d7b-417c-8f5f-cca106f111e9.png)
+
+![image](https://user-images.githubusercontent.com/51326421/163709990-61457b33-c90e-45e7-a863-c1331aa5c9ad.png)
+
+
+
+
+## Responsive on mobile screens
+
+![image](https://user-images.githubusercontent.com/51326421/163709952-cc07c0e2-3cfd-4e53-9c6b-f03c55c8073f.png)
+
+
+
+![image](https://user-images.githubusercontent.com/51326421/163709965-9621fe84-1bc0-4cf1-a275-89e6a9058b28.png)
 
 
 
