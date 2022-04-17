@@ -1,19 +1,22 @@
-import React, { Fragment } from 'react'
-import Header from './header'
+import React from 'react';
+
+import Footer from './footer';
+import Header from './header';
 
 type LayoutProps = {
-	children: React.ReactNode
+  children: React.ReactNode;
+};
+
+export function Layout({ children }: LayoutProps) {
+  return (
+    <>
+      <Header />
+      <main className="mx-auto mb-[2re] min-h-[50vh] w-full max-w-[82rem] p-4 ">
+        {children}
+      </main>
+      <Footer />
+    </>
+  );
 }
 
-const Layout: React.FC<LayoutProps> = (props) => {
-	return (
-		<Fragment>
-			<Header />
-			<main className=" w-full mx-auto max-w-[82rem] p-4 ">
-				{props.children}
-			</main>
-		</Fragment>
-	)
-}
-
-export default Layout
+export default Layout;
