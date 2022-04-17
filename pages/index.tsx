@@ -1,30 +1,28 @@
-import { GetServerSideProps } from 'next'
+import { GetServerSideProps } from 'next';
+import { CountryType } from 'types/index';
 
-import MainContent from '../components/main-content'
-
-import { CountryType } from '../types/index'
+import MainContent from '@/page-components/home-page';
 
 type Props = {
-	countries: CountryType[]
+  countries: CountryType[];
+};
+
+export default function Index({ countries }: Props) {
+  return <MainContent countries={countries} />;
 }
 
-const Index = ({ countries }: Props) => {
-	return <MainContent countries={countries} />
-}
 // This gets called on every request
-export const getServerSideProps: GetServerSideProps = async (context) => {
-	// Fetch data from external API
-	const res = await fetch(`https://restcountries.com/v3.1/all`)
-	const data = await res.json()
+export const getServerSideProps: GetServerSideProps = async () => {
+  // Fetch data from external API
+  const res = await fetch('https://restcountries.com/v3.1/all');
+  const data = await res.json();
 
-	if (!data) {
-		return {
-			notFound: true,
-		}
-	}
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
 
-	// Pass data to the page via props
-	return { props: { countries: data } }
-}
-
-export default Index
+  // Pass data to the page via props
+  return { props: { countries: data } };
+};
