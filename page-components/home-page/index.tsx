@@ -11,7 +11,7 @@ type Props = {
   countries: CountryType[];
 };
 
-export default function MainContent({ countries }: Props) {
+export function MainContent({ countries }: Props) {
   const [data, setData] = useState<CountryType[]>(countries);
   const [region, setRegion] = useState<string | ''>('');
 

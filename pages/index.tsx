@@ -1,7 +1,7 @@
 import { GetServerSideProps } from 'next';
 import { CountryType } from 'types/index';
 
-import MainContent from '@/page-components/home-page';
+import { MainContent } from '@/page-components';
 
 type Props = {
   countries: CountryType[];
