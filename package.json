@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-typescript-redux-tailwindcss-boilerplate",
+  "name": "rest-countries-api-app",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -26,11 +26,11 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.8",
+    "react-spinners": "^0.11.0",
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
-    "redux-promise-middleware": "^6.1.2",
     "redux-thunk": "^2.4.1",
     "resolve": "^1.22.0",
     "tailwind-scrollbar-hide": "^1.1.7",
@@ -73,6 +73,6 @@
     "prettier-plugin-tailwindcss": "^0.1.1",
     "typescript": "4.5.4"
   },
-  "repository": "https://github.com/saddamarbaa/nextjs-typescript-redux-tailwindcss-boilerplate",
+  "repository": "https://github.com/saddamarbaa/rest-countries-app-nextjs-typescript",
   "author": "Saddam Arbaa"
 }
