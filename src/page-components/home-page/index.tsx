@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
+import { BeatLoader } from 'react-spinners';
 import { SearchIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -59,7 +60,7 @@ export function MainContent(props: PropsType) {
   return (
     <div className="flex w-full flex-col items-center">
       <div className="w-full max-w-[90%] justify-between space-y-8 pt-[2rem] pb-[2rem] sm:flex  sm:space-y-0  lg:max-w-[100%]">
-        <div className="form-control dar:shadow-xl font-norma xl:max-w-96 mb-3 flex w-full items-center  rounded bg-white py-3 px-4 text-base shadow ring-1 ring-slate-900/5 dark:bg-slate-900 sm:w-96  ">
+        <div className="form-control dar:shadow-xl font-norma xl:max-w-96 mb-3 flex w-full items-center  rounded bg-white py-4 px-4 text-base shadow ring-1 ring-slate-900/5 dark:bg-slate-900 sm:w-96  ">
           <SearchIcon
             className="h-15 w-5 text-[1.1rem] tracking-tight  text-slate-500  dark:text-slate-400"
             role="button"
@@ -73,14 +74,20 @@ export function MainContent(props: PropsType) {
           />
         </div>
         {getCountriesIsLoading && (
-          <div className=" hidden max-w-[200px] items-center   py-3 px-4 text-base font-semibold    text-slate-500  dark:text-slate-200  sm:inline-flex">
-            Searching ...
+          <div className=" hidden w-full max-w-[300px] items-center  sm:flex ">
+            <span className="mr-4 justify-center text-base font-bold  text-slate-500 dark:text-slate-200">
+              Searching
+            </span>
+            <span className="pt-2">
+              <BeatLoader color="#9B9B9B" />
+            </span>
           </div>
         )}
+
         <div className="mb-3  cursor-pointer sm:ml-6">
           <select
             onChange={(event) => setRegion(event.target.value)}
-            className="form-control dar:shadow-xl font-norma l block w-full rounded bg-white px-4 py-3  text-base shadow ring-1 ring-slate-900/5 focus:outline-none dark:bg-slate-900 sm:text-[1.2rem]"
+            className="form-control dar:shadow-xl font-norma l dark:bg-dark-element-bg block w-full rounded bg-white px-4  py-4 text-base shadow ring-1 ring-slate-900/5 focus:outline-none dark:bg-slate-900 sm:text-[1.2rem]"
             aria-label="form-select-lg"
             defaultValue="Filter by region"
           >
@@ -94,13 +101,18 @@ export function MainContent(props: PropsType) {
           </select>
         </div>
       </div>
+
       {getCountriesIsLoading && (
-        <div className=" mt-[1rem] mb-[1rem] max-w-[200px] items-center  py-3 px-4 text-base font-semibold  text-slate-500  dark:text-slate-200 sm:hidden">
-          Searching ...
+        <div className="mb-[1.2rem] flex w-full  items-center justify-center  sm:hidden">
+          <span className="mr-4    text-base font-bold text-slate-500 dark:text-slate-200">
+            Searching
+          </span>
+          <span className="pt-2">
+            <BeatLoader color="#9B9B9B" />
+          </span>
         </div>
       )}
-
-      <div className="mb-8 grid w-full max-w-[90%] grid-cols-1 gap-8 sm:grid-cols-2 lg:max-w-[100%]  lg:grid-cols-3  xl:grid-cols-4 ">
+      <div className="mb-8 grid w-full max-w-[90%] grid-cols-1 gap-16 sm:grid-cols-2 lg:max-w-[100%]  lg:grid-cols-3  xl:grid-cols-4 ">
         {countries.length > 0 &&
           countries.map((country: CountryType) => (
             <Link href={`country/${country?.name?.official}`}>
