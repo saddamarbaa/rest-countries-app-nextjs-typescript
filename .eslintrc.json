@@ -106,6 +106,7 @@
         "officialSorting": true
       }
     ],
+    "no-shadow": "off",
     "no-console": "warn",
     "no-nested-ternary": 0,
     "no-underscore-dangle": 0,
@@ -170,18 +171,16 @@
       },
       "alias": {
         "map": [
-          ["@/*", "./"],
-          ["pages", "./pages"],
-          ["components", "./components"],
-          ["page-components", "./page-components"],
-          ["utils", "./utils"],
-          ["services", "./services"],
-          ["layouts", "./components/layouts"],
-          ["tests", "./tests"],
-          ["types", "./types"],
-          ["global-states", "./global-states"],
-          ["constants", "./constants"],
-          ["contexts", "./contexts"]
+          ["components", "./src/components"],
+          ["page-components", "./src/page-components"],
+          ["utils", "./src/utils"],
+          ["services", "./src/services"],
+          ["layouts", "./src/components/layouts"],
+          ["tests", "./src/tests"],
+          ["types", "./src/types"],
+          ["global-states", "./src/global-states"],
+          ["constants", "./src/constants"],
+          ["contexts", "./src/contexts"]
         ],
         "extensions": [".ts", ".js", ".jsx", ".tsx", ".json"]
       },

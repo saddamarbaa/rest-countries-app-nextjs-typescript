@@ -1,14 +1,17 @@
 module.exports = {
   mode: 'jit',
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './page-components/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   important: true,
   darkMode: 'class', // or 'media' or 'class'
   theme: {
-    extend: {},
+    screens: {
+      xs: '320px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      xxl: '1536px',
+    },
   },
   variants: {
     extend: {},

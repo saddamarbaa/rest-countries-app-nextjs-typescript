@@ -5,19 +5,19 @@ Heroicons, Vercel Hosting (a mobile-friendly) Made with developer experience fir
 
 # Table of contents
 
--  [Author](#Author)
--  [Demo](#Demo)
--  [Technologies](#Technologies)
--  [Optimizations](#Optimizations)
--  [Contributing](#Contributing)
--  [Status](#status)
--  [Features](#Features)
--  [Inspiration](#inspiration)
--  [Related Projects](#Related_Projects)
--  [Support](#Support)
--  [Feedback](#Feedback)
--  [Run Locally](#Run_Locally)
--  [Screenshots](#Screenshots)
+- [Author](#Author)
+- [Demo](#Demo)
+- [Technologies](#Technologies)
+- [Optimizations](#Optimizations)
+- [Contributing](#Contributing)
+- [Status](#status)
+- [Features](#Features)
+- [Inspiration](#inspiration)
+- [Related Projects](#Related_Projects)
+- [Support](#Support)
+- [Feedback](#Feedback)
+- [Run Locally](#Run_Locally)
+- [Screenshots](#Screenshots)
 
 # Author
 
@@ -25,13 +25,12 @@ Heroicons, Vercel Hosting (a mobile-friendly) Made with developer experience fir
 
 # Technologies
 
--  React Js
--  Next Js
--  TypeScript
--  Tailwind CSS
--  Heroicons
--  Vercel Hosting
-
+- React Js
+- Next Js
+- TypeScript
+- Tailwind CSS
+- Heroicons
+- Vercel Hosting
 
 # Demo
 
@@ -39,22 +38,22 @@ Heroicons, Vercel Hosting (a mobile-friendly) Made with developer experience fir
 
 # Optimizations
 
--  Next' Js Image component
--  Next' Js file-system based router
--  Next' Js Server-side rendering
--  Memoization (useMemo, Memo)
--  Advanced Debouncing (custom Hook)
--  Function components
--  React hooks
--  React useEffect cleanup
--  TypeScript
+- Next' Js Image component
+- Next' Js file-system based router
+- Next' Js Server-side rendering
+- Memoization (useMemo, Memo)
+- Advanced Debouncing (custom Hook)
+- Function components
+- React hooks
+- React useEffect cleanup
+- TypeScript
 
 # Features
 
--  View all countries
--  Search for Single Country
--  Filter countries by Region
--  Toggle Dark/Light Mode
+- View all countries
+- Search for Single Country
+- Filter countries by Region
+- Toggle Dark/Light Mode
 
 # Contributing
 
@@ -62,24 +61,23 @@ Contributions are always welcome!
 
 # Related_Projects
 
+### Facebook Clone App built with React Js + Next Js + TypeScript + Redux + Styled Components
 
-###  Facebook Clone App built with React Js + Next Js + TypeScript + Redux + Styled Components
+### <a href="https://github.com/saddamarbaa/facebook-clone-app-nex-js"> Github Repo </a>
 
-###  <a href="https://github.com/saddamarbaa/facebook-clone-app-nex-js"> Github Repo </a>
-###  <a href="https://facebook-clone-app-nex-js.vercel.app/">LIVE DEMO</a> 
+### <a href="https://facebook-clone-app-nex-js.vercel.app/">LIVE DEMO</a>
 
+### Instagram Clone App built with React Js + Next Js + TypeScript + Redux + Tailwind CSS + Heroicons
 
-### Instagram Clone App built with React Js + Next Js + TypeScript + Redux + Tailwind CSS + Heroicons 
+### <a href="https://github.com/saddamarbaa/Instagram-clone-app-nex-js"> Github Repo </a>
 
-###  <a href="https://github.com/saddamarbaa/Instagram-clone-app-nex-js"> Github Repo </a>
-###  <a href="https://instagram-clone-app-nex-js.vercel.app/">LIVE DEMO</a> 
+### <a href="https://instagram-clone-app-nex-js.vercel.app/">LIVE DEMO</a>
 
+### Messenger Clone App built with React Js + Next Js + Redux + Styled Components + Material-UI
 
-###  Messenger Clone App built with React Js + Next Js + Redux +  Styled Components + Material-UI  
+### <a href="https://github.com/saddamarbaa/messenger-clone-app-nex-js"> Github Repo </a>
 
-###  <a href="https://github.com/saddamarbaa/messenger-clone-app-nex-js"> Github Repo </a>
-###  <a href="https://messenger-clone-app-nex-js.vercel.app/">LIVE DEMO</a> 
-
+### <a href="https://messenger-clone-app-nex-js.vercel.app/">LIVE DEMO</a>
 
 ### Airbnb Clone App built with React Js + Next Js + Redux + Tailwind CSS
 
@@ -92,7 +90,6 @@ Contributions are always welcome!
 ### <a href="https://github.com/saddamarbaa/amazon-clone-app"> Github Repo </a>
 
 ### <a href="https://amazoon-clone-app.web.app/">LIVE DEMO</a>
-
 
 # Support
 
@@ -139,8 +136,6 @@ yarn install
 npm install
 ```
 
-
-
 Start the server
 
 ```bash
@@ -166,15 +161,13 @@ yarn test-all
 # or if You're using npm you can use npm instead of yarn for all the above ESLint + Prettier + Lint-Staged Check steps
 ```
 
-
-
 # Status
 
 Project is now complete in (React js + Next js + TypeScript + Tailwind CSS) so my next step I would love to converted to (React Native + TypeScript)
 
 # Inspiration
 
-Build By Saddam Arbaa Project inspired by [ Frontend Mentor]  https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca
+Build By Saddam Arbaa Project inspired by [ Frontend Mentor] https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca
 
 # Screenshots
 
@@ -182,15 +175,7 @@ Build By Saddam Arbaa Project inspired by [ Frontend Mentor]  https://www.fronte
 
 ![image](https://user-images.githubusercontent.com/51326421/163710516-534c0b3e-53e4-4294-86b8-ec0f86b1298c.png)
 
-
-
-
 ![image](https://user-images.githubusercontent.com/51326421/163710494-a7bd623d-0392-47d6-bf23-89dca97ac6c8.png)
-
-
-
-
-
 
 ## Responsive on tablet screens
 
@@ -198,88 +183,57 @@ Build By Saddam Arbaa Project inspired by [ Frontend Mentor]  https://www.fronte
 
 ![image](https://user-images.githubusercontent.com/51326421/163709990-61457b33-c90e-45e7-a863-c1331aa5c9ad.png)
 
-
-
-
 ## Responsive on mobile screens
 
 ![image](https://user-images.githubusercontent.com/51326421/163709952-cc07c0e2-3cfd-4e53-9c6b-f03c55c8073f.png)
 
-
-
 ![image](https://user-images.githubusercontent.com/51326421/163709965-9621fe84-1bc0-4cf1-a275-89e6a9058b28.png)
 
-
-
-
-
 ## Single Country Page
+
 ![image](https://user-images.githubusercontent.com/51326421/163708699-85f7cfe7-24ee-4787-8e2e-f9b2601d290e.png)
 
 ![image](https://user-images.githubusercontent.com/51326421/163708715-acc2c0b7-d09b-47eb-b3b7-44d1073bdbe3.png)
 
-
 ![image](https://user-images.githubusercontent.com/51326421/163708866-b6cd94e3-bdc8-4ebe-a2d3-01db9af9205f.png)
 
-
-
-
 ## 404 Not Found Page
+
 ![image](https://user-images.githubusercontent.com/51326421/163708746-a1de272f-8c7d-4393-a422-c553f60755ca.png)
 
 ![image](https://user-images.githubusercontent.com/51326421/163708764-f5e58743-31ea-4b49-b1c8-27f102c50720.png)
 
-
 ![image](https://user-images.githubusercontent.com/51326421/163708804-14feeb06-6a63-471d-b8fa-9f0db5e39a93.png)
-
 
 ![image](https://user-images.githubusercontent.com/51326421/163708790-1c83d12b-bcd1-42e4-8937-575ba9aa8819.png)
 
-
-
-
-##  Search Page
+## Search Page
 
 ![image](https://user-images.githubusercontent.com/51326421/163709205-778b90f5-82d8-4b92-9122-a4996789369c.png)
 
 ![image](https://user-images.githubusercontent.com/51326421/163709248-42c5ce8f-9d7d-4f91-bc1a-230d8368c14f.png)
 
-
-
-
-
 ## Filter countries by Region
+
 ### Filter countries by Region (America)
 
 ![image](https://user-images.githubusercontent.com/51326421/163710037-53450929-07e8-4e3c-9c5e-37815be262d4.png)
-
 
 ### Filter countries by Region (Africa)
 
 ![image](https://user-images.githubusercontent.com/51326421/163710107-cea352d2-102c-4253-8169-d49fde66b975.png)
 
-
-
 ### Filter countries by Region (Asia)
 
 ![image](https://user-images.githubusercontent.com/51326421/163710133-466d13f8-2c9c-4f21-81b9-802f2fd04ab6.png)
-
 
 ### Filter countries by Region (Europe)
 
 ![image](https://user-images.githubusercontent.com/51326421/163710184-b0a37141-76c2-4268-abb8-48d4124dd6c7.png)
 
-
-
 ### Filter countries by Region (Oceania)
 
 ![image](https://user-images.githubusercontent.com/51326421/163710230-b0981530-8cf2-48a3-b6b2-8a8537f943f4.png)
-
-
-
-
-
-
 
 # Next.js + Tailwind CSS Example
 
