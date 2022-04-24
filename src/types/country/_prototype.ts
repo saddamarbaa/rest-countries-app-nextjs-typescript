@@ -17,6 +17,13 @@ export type CountryType = {
   currencies?: any;
   subregion?: string;
   borders?: string[];
+  capitalInfo: {
+    latlng: [number, number];
+  };
+  maps: {
+    googleMaps: string;
+    openStreetMaps: string;
+  };
 };
 
 export interface _countryReducerState {
