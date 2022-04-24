@@ -1,6 +1,6 @@
 # Front-End Mentor Rest Countries API Challenge
 
-Building Front-End Mentor Rest Countries API App Challenge with React Js, Next Js, TypeScript, Tailwind CSS,
+Building Front-End Mentor Rest Countries API Challenge with React Js, Next Js, TypeScript, Tailwind CSS,
 Heroicons, Vercel Hosting (a mobile-friendly) Made with developer experience first ESLint + Prettier + Lint-Staged + VSCode setup .
 
 # Table of contents
@@ -54,6 +54,9 @@ Heroicons, Vercel Hosting (a mobile-friendly) Made with developer experience fir
 - Search for Single Country
 - Filter countries by Region
 - Toggle Dark/Light Mode
+- Toggle Dark/Light Mode
+- Google Map with zoom  Focus to the country captical city
+-  View on real google map link 
 
 # Contributing
 
@@ -191,11 +194,12 @@ Build By Saddam Arbaa Project inspired by [ Frontend Mentor] https://www.fronten
 
 ## Single Country Page
 
-![image](https://user-images.githubusercontent.com/51326421/163708699-85f7cfe7-24ee-4787-8e2e-f9b2601d290e.png)
+![image](https://user-images.githubusercontent.com/51326421/164975596-0f0f97ab-bba3-4cee-81da-f299f761f01b.png)
 
-![image](https://user-images.githubusercontent.com/51326421/163708715-acc2c0b7-d09b-47eb-b3b7-44d1073bdbe3.png)
+![image](https://user-images.githubusercontent.com/51326421/164975626-ee755fb4-3ebe-427f-9da8-c27648162106.png)
 
-![image](https://user-images.githubusercontent.com/51326421/163708866-b6cd94e3-bdc8-4ebe-a2d3-01db9af9205f.png)
+![image](https://user-images.githubusercontent.com/51326421/164975684-db9564c8-c5f1-4af1-9557-275439627dd9.png)
+
 
 ## 404 Not Found Page
 
