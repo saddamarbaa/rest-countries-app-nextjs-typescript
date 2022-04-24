@@ -11,6 +11,8 @@ module.exports = () => ({
     AUTH_COOKIE_NAME: process.env.AUTH_COOKIE_NAME,
     CONSOLE_BACKEND_ENDPOINT: process.env.CONSOLE_BACKEND_ENDPOINT,
     CONSOLE_BACKEND_IMG_ENDPOIN: process.env.CONSOLE_BACKEND_IMG_ENDPOIN,
+    NEXT_PUBLIC_MAP_BOX_ACCESS_TOKEN:
+      process.env.NEXT_PUBLIC_MAP_BOX_ACCESS_TOKEN,
   },
   publicRuntimeConfig: {
     APP_ID: process.env.APP_ID,

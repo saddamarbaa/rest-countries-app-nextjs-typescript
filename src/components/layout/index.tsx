@@ -11,9 +11,7 @@ export function Layout({ children }: LayoutProps) {
   return (
     <>
       <Header />
-      <main className="mx-auto mb-[2re] min-h-[50vh] w-full max-w-[82rem] p-4 ">
-        {children}
-      </main>
+      <main className="mb-[2re] min-h-[50vh] w-full">{children}</main>
       <Footer />
     </>
   );

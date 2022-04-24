@@ -55,8 +55,8 @@ Heroicons, Vercel Hosting (a mobile-friendly) Made with developer experience fir
 - Filter countries by Region
 - Toggle Dark/Light Mode
 - Toggle Dark/Light Mode
-- Google Map with zoom  Focus to the country captical city
--  View on real google map link 
+- Google Map with zoom Focus to the country captical city
+- View on real google map link
 
 # Contributing
 
@@ -199,7 +199,6 @@ Build By Saddam Arbaa Project inspired by [ Frontend Mentor] https://www.fronten
 ![image](https://user-images.githubusercontent.com/51326421/164975626-ee755fb4-3ebe-427f-9da8-c27648162106.png)
 
 ![image](https://user-images.githubusercontent.com/51326421/164975684-db9564c8-c5f1-4af1-9557-275439627dd9.png)
-
 
 ## 404 Not Found Page
 
