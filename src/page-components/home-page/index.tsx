@@ -128,6 +128,8 @@ export function MainContent(props: PropsType) {
                       layout="fill"
                       objectFit="cover"
                       src={country.flags.png}
+                      placeholder="blur"
+                      blurDataURL={country.flags.png}
                       alt={`The flag of ${country?.name?.official}`}
                     />
                   </div>

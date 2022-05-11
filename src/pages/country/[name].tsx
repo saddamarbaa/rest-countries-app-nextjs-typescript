@@ -76,6 +76,8 @@ function Index({ listState }: PropsType) {
                 <div className="relative h-[300px] lg:h-auto lg:basis-1/2">
                   <Image
                     src={country[0]?.flags.png}
+                    placeholder="blur"
+                    blurDataURL={country[0]?.flags.png}
                     alt={`The flag of ${country[0]?.name?.official}`}
                     layout="fill"
                     objectFit="cover"
