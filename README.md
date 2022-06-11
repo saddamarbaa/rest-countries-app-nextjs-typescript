@@ -51,8 +51,9 @@ Heroicons, Vercel Hosting (a mobile-friendly) Made with developer experience fir
 # Features
 
 - View all countries
-- Search for Single Country
-- Filter countries by Region
+- View individual country details
+- Search for single country
+- Filter countries by region
 - Toggle Dark/Light Mode
 - Toggle Dark/Light Mode
 - Google Map with zoom Focus to the country captical city
@@ -63,6 +64,9 @@ Heroicons, Vercel Hosting (a mobile-friendly) Made with developer experience fir
 Contributions are always welcome!
 
 # Related_Projects
+
+### Front-End Mentor Rest Countries API Challenge app built with React Native + TypeScript + Expo + React Navigation
+### <a href="https://github.com/saddamarbaa/rest-countries-app-reactnative-typescript"> Github Repo </a>
 
 ### Facebook Clone App built with React Js + Next Js + TypeScript + Redux + Styled Components
 
