@@ -1,3 +1,3 @@
-export * from './custom-hooks';
-export * from './design-system';
-export * from './layout';
+export * from './ui';
+export * from './layouts';
+export * from './map';
