@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-[#FAFAFA] text-gray-900 dark:bg-[#212E37] dark:text-gray-100;
-    @apply min-h-screen;
-  }
-  html {
-    font-family: 'Nunito Sans', sans-serif;
-  }
+html::-webkit-scrollbar {
+	/* display: none; */
+}
+
+html {
+	/* scrollbar-width: none; */
+	scroll-behavior: smooth; /* Add smooth scrolling behavior */
+	overscroll-behavior-y: contain; /* Prevent over-scrolling on the y-axis */
 }
