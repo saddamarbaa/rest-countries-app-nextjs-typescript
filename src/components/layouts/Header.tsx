@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import DarkModSwitch from '../ui/DarkModSwitch';
-import { FaGlobe } from 'react-icons/fa';
+import Link from "next/link";
+import { FaGlobe } from "react-icons/fa";
+import DarkModeSwitch from "../ui/DarkModSwitch";
 
-import Auth from '../auth/Auth';
+// import Auth from "../auth/Auth";
 
 export function Header() {
   return (
@@ -12,19 +12,19 @@ export function Header() {
           <Link href="/">
             <h1 className="flex cursor-pointer select-none items-center text-lg font-bold sm:text-2xl">
               <FaGlobe
-                className="mr-4 h-6 w-6 sm:h-10 sm:w-10 sm:text-4xl text-gray-900 dark:text-white"
+                className="mr-4 h-6 w-6 text-gray-900 dark:text-white sm:h-10 sm:w-10 sm:text-4xl"
                 role="button"
               />
               <span className="hidden sm:inline-block">
-                {' '}
+                {" "}
                 Where in the world?
               </span>
             </h1>
           </Link>
         </div>
-        <div className="items-center justify-end space-x-10  w-full flex">
-          <DarkModSwitch />
-          <Auth />
+        <div className="flex w-full items-center  justify-end space-x-10">
+          <DarkModeSwitch />
+          {/* <Auth /> */}
         </div>
       </div>
     </header>

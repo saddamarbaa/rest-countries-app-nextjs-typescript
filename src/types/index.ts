@@ -1,6 +1,3 @@
-
-
-
 export interface CountryType {
   name: {
     common: string;
@@ -72,5 +69,5 @@ export interface CountryType {
   capitalInfo: {
     latlng: number[];
   };
-  borders?: string[]
+  borders?: string[];
 }

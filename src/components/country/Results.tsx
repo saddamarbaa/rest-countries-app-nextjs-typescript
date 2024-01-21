@@ -1,23 +1,23 @@
-'use client';
+"use client";
 
-import { CountryType } from '@/types';
-import React, { useEffect, useState } from 'react';
-import { FiSearch } from 'react-icons/fi';
-import { BeatLoader } from 'react-spinners';
+import { CountryType } from "@/types";
+import React, { useEffect, useState } from "react";
+import { FiSearch } from "react-icons/fi";
+import { BeatLoader } from "react-spinners";
 
-import Card from './Card';
-import { useDebounce } from '@/hooks';
+import Card from "./Card";
+import { useDebounce } from "@/hooks";
 
 type Props = {
   initialCountries: CountryType[];
 };
 
 export function Results({ initialCountries }: Props) {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [region, setRegion] = useState('');
+  const [region, setRegion] = useState("");
   const [countries, setCountries] = useState(initialCountries || []);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   // Debounce the search term to reduce API calls
   const debouncedSearchTerm = useDebounce(searchTerm, 500);
@@ -29,24 +29,24 @@ export function Results({ initialCountries }: Props) {
         const response = await fetch(url);
 
         if (!response.ok) {
-          throw new Error('Failed to fetch data');
+          throw new Error("Failed to fetch data");
         }
         const data = (await response.json()) || [];
         setCountries(data);
-        setError('');
+        setError("");
       } catch (error) {
-        console.error('Error fetching countries:', error);
+        console.error("Error fetching countries:", error);
         setCountries([]);
-        setError('Failed to fetch data. Please try again.');
+        setError("Failed to fetch data. Please try again.");
       } finally {
         setIsLoading(false);
       }
     };
 
-    let url = 'https://restcountries.com/v3.1/all';
+    let url = "https://restcountries.com/v3.1/all";
     if (debouncedSearchTerm) {
       url = `https://restcountries.com/v3.1/name/${debouncedSearchTerm}`;
-    } else if (region && region !== 'All') {
+    } else if (region && region !== "All") {
       url = `https://restcountries.com/v3.1/region/${region}`;
     }
 
@@ -56,11 +56,11 @@ export function Results({ initialCountries }: Props) {
   }, [region, debouncedSearchTerm]);
 
   return (
-    <div className="mx-auto w-full max-w-[82rem] p-4 flex-1 flex flex-col">
+    <div className="mx-auto flex w-full max-w-[82rem] flex-1 flex-col p-4">
       <div className="mx-auto w-full max-w-[82rem] p-4">
         <div className="flex w-full flex-col items-center">
-          <div className="w-full max-w-[90%] justify-between space-y-8 pt-[2.2rem] pb-[2.2rem] sm:flex sm:space-y-0 lg:max-w-[100%]">
-            <div className="form-control dar:shadow-xl font-norma xl:max-w-96 mb-3 flex w-full items-center rounded bg-white py-4 px-4 text-base shadow ring-1 ring-slate-900/5 dark:bg-slate-900 sm:w-96">
+          <div className="w-full max-w-[90%] justify-between space-y-8 pb-[2.2rem] pt-[2.2rem] sm:flex sm:space-y-0 lg:max-w-[100%]">
+            <div className="form-control dar:shadow-xl font-norma xl:max-w-96 mb-3 flex w-full items-center rounded bg-white px-4 py-4 text-base shadow ring-1 ring-slate-900/5 dark:bg-slate-900 sm:w-96">
               <FiSearch
                 className="h-5 w-5 text-[1.1rem] tracking-tight text-slate-500 dark:text-slate-400"
                 role="button"
@@ -106,10 +106,10 @@ export function Results({ initialCountries }: Props) {
           </div>
         </div>
       </div>
-      <div className="flex w-full flex-col items-center flex-1">
+      <div className="flex w-full flex-1 flex-col items-center">
         {countries && countries.length === 0 ? (
-          <div className="w-full max-w-[90%] rounded-lg bg-white p-4 my-auto py-6 shadow-md ring-1 ring-slate-900/5 dark:bg-slate-900 dark:text-gray-100 dark:shadow-lg lg:max-w-[100%] text-center">
-            <p className="text-xl font-bold mb-4">No results found</p>
+          <div className="my-auto w-full max-w-[90%] rounded-lg bg-white p-4 py-6 text-center shadow-md ring-1 ring-slate-900/5 dark:bg-slate-900 dark:text-gray-100 dark:shadow-lg lg:max-w-[100%]">
+            <p className="mb-4 text-xl font-bold">No results found</p>
             <p className="text-lg text-gray-600 dark:text-gray-100">
               We couldnt find any results matching your search. Please try again
               with different keywords.
