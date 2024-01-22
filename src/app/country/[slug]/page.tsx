@@ -71,8 +71,8 @@ export default async function SingleCountryPage(props: Props) {
           <div className="my-auto w-full max-w-[90%] rounded-lg bg-white p-4 py-6 text-center shadow-md ring-1 ring-slate-900/5 dark:bg-slate-900 dark:text-gray-100 dark:shadow-lg lg:max-w-[100%]">
             <p className="mb-4 text-xl font-bold">No results found</p>
             <p className="text-lg text-gray-600 dark:text-gray-100">
-              We couldn't find any results matching your search. Please try again
-              with different keywords.
+              We couldn't find any results matching your search. Please try
+              again with different keywords.
             </p>
           </div>
         </div>
