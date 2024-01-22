@@ -50,7 +50,7 @@ const Home = async () => {
   };
 
   return (
-    <main className="">
+    <main className="p-24">
       <h1 className="text-center text-3xl font-bold">Products</h1>
 
       <form
