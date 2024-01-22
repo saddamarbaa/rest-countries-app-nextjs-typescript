@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { FaGlobe } from "react-icons/fa";
 import DarkModeSwitch from "../ui/DarkModSwitch";
-
+import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+import Auth from "../auth/Auth";
 // import Auth from "../auth/Auth";
 
 export function Header() {
-  return (
+
+   return (
     <header className="sticky top-0 z-50 bg-white shadow dark:border-gray-700 dark:bg-[#212E37] dark:shadow-lg">
       <div className="mx-auto flex w-full max-w-[82rem] items-center justify-between p-4 py-6">
         <div className="cursor-pointer whitespace-nowrap font-sans text-[1.2rem] font-bold tracking-tight text-slate-900 dark:text-white">
@@ -24,11 +26,14 @@ export function Header() {
         </div>
         <div className="flex w-full items-center  justify-end space-x-10">
           <DarkModeSwitch />
-          {/* <Auth /> */}
+          <Auth />
         </div>
       </div>
     </header>
-  );
+   );
+  
+  
+
 }
 
 export default Header;
