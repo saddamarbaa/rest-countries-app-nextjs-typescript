@@ -1,3 +1,4 @@
+import Map from '@/components/map'
 import { Button } from '@/components/ui'
 import { CountryType } from '@/types'
 import { Metadata } from 'next'
@@ -205,6 +206,15 @@ export default async function SingleCountryPage({ params }: Props) {
 					</div>
 				)}
 			</div>
+
+			{country && country.length > 0 && (
+				<div>
+					<Map
+						latitude={country[0]?.capitalInfo?.latlng[0] || 37.7749}
+						longitude={country[0]?.capitalInfo?.latlng[1] || -122.4194}
+					/>
+				</div>
+			)}
 		</>
 	)
 }
