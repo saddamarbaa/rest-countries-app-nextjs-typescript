@@ -15,14 +15,13 @@ type Props = {
 interface CountryKey {
 	cca3?: string
 	ccn3?: string
-	cioc?: string
 	name: {
 		common: string
 	}
 }
 
 const getKey = (country: CountryKey): string =>
-	country.cca3 || country.ccn3 || country.cioc || country.name.common
+	country.cca3 || country.ccn3 || country.name.common
 
 export function Results({ initialCountries }: Props) {
 	const [searchTerm, setSearchTerm] = useState('')
@@ -40,23 +39,41 @@ export function Results({ initialCountries }: Props) {
 
 		const getCountries = async () => {
 			setIsLoading(true)
+			setError('')
 
 			try {
 				let url = API_BASE + '/all'
-				if (debouncedSearchTerm) url = `${API_BASE}/name/${debouncedSearchTerm}`
-				else if (region && region !== 'All')
-					url = `${API_BASE}/region/${region}`
+				if (debouncedSearchTerm.trim()) {
+					url = `${API_BASE}/name/${encodeURIComponent(
+						debouncedSearchTerm.trim(),
+					)}`
+				} else if (region && region !== 'All') {
+					url = `${API_BASE}/region/${encodeURIComponent(region)}`
+				}
 
 				const response = await fetch(`${url}?fields=${FIELDS}`, {
 					signal: controller.signal,
 				})
 
-				if (!response.ok) throw new Error(`HTTP ${response.status}`)
+				if (!response.ok) {
+					if (response.status === 404) {
+						setCountries([])
+						return
+					}
+					throw new Error(`HTTP ${response.status}`)
+				}
 
 				const data = await response.json()
+
+				// Handle case where API returns error object instead of array
+				if (data.status && data.status !== 200) {
+					throw new Error(data.message || 'API Error')
+				}
+
 				setCountries(Array.isArray(data) ? data : [])
-			} catch {
+			} catch (error) {
 				if (!controller.signal.aborted) {
+					console.error('Search error:', error)
 					setError('Failed to load countries')
 					setCountries([])
 				}
@@ -69,16 +86,14 @@ export function Results({ initialCountries }: Props) {
 		return () => controller.abort()
 	}, [region, debouncedSearchTerm])
 
-	console.log(error)
-
 	return (
-		<div className="mx-auto flex w-full max-w-[82rem] flex-1 flex-col p-4">
-			<div className="mx-auto w-full max-w-[82rem] ">
-				<div className="flex w-full flex-col items-center">
-					<div className="w-full max-w-[90%] justify-between space-y-8 pb-[2.2rem] pt-[2.2rem] sm:flex sm:space-y-0 lg:max-w-[100%]">
-						<div className="form-control dark:shadow-xl font-norma xl:max-w-96 mb-3 flex w-full items-center rounded bg-white p-3  text-base shadow ring-1 ring-slate-900/5 dark:bg-slate-900 sm:w-96">
+		<div className="flex flex-col flex-1 mx-auto p-4 w-full max-w-[82rem]">
+			<div className="mx-auto w-full max-w-[82rem]">
+				<div className="flex flex-col items-center w-full">
+					<div className="sm:flex justify-between space-y-8 sm:space-y-0 pt-[2.2rem] pb-[2.2rem] w-full max-w-[90%] lg:max-w-[100%]">
+						<div className="flex items-center bg-white dark:bg-slate-900 shadow dark:shadow-xl mb-3 p-3 rounded ring-1 ring-slate-900/5 w-full sm:w-96 xl:max-w-96 font-norma text-base form-control">
 							<FiSearch
-								className="h-5 w-5 text-[1.1rem] tracking-tight text-slate-500 dark:text-slate-400"
+								className="w-5 h-5 text-[1.1rem] text-slate-500 dark:text-slate-400 tracking-tight"
 								role="button"
 							/>
 							<input
@@ -91,18 +106,18 @@ export function Results({ initialCountries }: Props) {
 						</div>
 
 						{isLoading && (
-							<div className="hidden w-full max-w-[300px] items-center sm:flex">
-								<span className="mr-4 justify-center text-base font-bold text-slate-500 dark:text-slate-200">
+							<div className="hidden sm:flex items-center w-full max-w-[300px]">
+								<span className="justify-center mr-4 font-bold text-slate-500 dark:text-slate-200 text-base">
 									Searching
 								</span>
 								{/* You can add a loader here like a spinner */}
 							</div>
 						)}
 
-						<div className="mb-3 cursor-pointer sm:ml-6">
+						<div className="mb-3 sm:ml-6 cursor-pointer">
 							<select
 								onChange={(event) => setRegion(event.target.value)}
-								className="form-control dark:shadow-xl font-norma l dark:bg-dark-element-bg block w-full rounded bg-white p-3 text-base shadow ring-1 ring-slate-900/5 focus:outline-none dark:bg-slate-900 sm:text-[1.2rem]"
+								className="block bg-white dark:bg-dark-element-bg dark:bg-slate-900 shadow dark:shadow-xl p-3 rounded focus:outline-none ring-1 ring-slate-900/5 w-full font-norma sm:text-[1.2rem] text-base form-control l"
 								aria-label="form-select-lg"
 								value={region}>
 								<option value="" disabled>
@@ -119,17 +134,17 @@ export function Results({ initialCountries }: Props) {
 					</div>
 				</div>
 			</div>
-			<div className="flex w-full flex-1 flex-col items-center">
+			<div className="flex flex-col flex-1 items-center w-full">
 				{countries && countries.length === 0 ? (
-					<div className="my-auto w-full max-w-[90%] rounded-lg bg-white p-4 py-6 text-center shadow-md ring-1 ring-slate-900/5 dark:bg-slate-900 dark:text-gray-100 dark:shadow-lg lg:max-w-[100%]">
-						<p className="mb-4 text-xl font-bold">No results found</p>
-						<p className="text-lg text-gray-600 dark:text-gray-100">
+					<div className="bg-white dark:bg-slate-900 shadow-md dark:shadow-lg my-auto p-4 py-6 rounded-lg ring-1 ring-slate-900/5 w-full max-w-[90%] lg:max-w-[100%] dark:text-gray-100 text-center">
+						<p className="mb-4 font-bold text-xl">No results found</p>
+						<p className="text-gray-600 dark:text-gray-100 text-lg">
 							We couldn&apos;t find any results matching your search. Please try
 							again with different keywords.
 						</p>
 					</div>
 				) : null}
-				<div className="mb-8 grid w-full max-w-[90%] grid-cols-1 gap-16 sm:grid-cols-2 lg:max-w-[100%] lg:grid-cols-3 xl:grid-cols-4">
+				<div className="gap-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-8 w-full max-w-[90%] lg:max-w-[100%]">
 					{countries.length > 0 &&
 						countries.map((country) => (
 							<Card key={getKey(country)} country={country} />

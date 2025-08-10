@@ -20,7 +20,7 @@ type MapProps = {
 	className?: string
 }
 
-export default function Mamp({ latitude, longitude }: MapProps) {
+export default function Map({ latitude, longitude }: MapProps) {
 	const [viewport, setViewport] = React.useState<ViewportProps>({
 		latitude,
 		longitude,
@@ -36,7 +36,7 @@ export default function Mamp({ latitude, longitude }: MapProps) {
 	}, [latitude, longitude])
 
 	return (
-		<div className="relative h-[600px] w-full sm:h-[800px]">
+		<div className="relative w-full h-[600px] sm:h-[800px]">
 			<MapBox
 				initialViewState={viewport}
 				style={{ width: '100%', height: '100%' }}
