@@ -114,6 +114,14 @@ export function Results({ initialCountries }: Props) {
 							</div>
 						)}
 
+						{error && (
+							<div className="hidden sm:flex items-center w-full max-w-[300px]">
+								<span className="justify-center mr-4 font-bold text-red-500 dark:text-red-400 text-base">
+									{error}
+								</span>
+							</div>
+						)}
+
 						<div className="mb-3 sm:ml-6 cursor-pointer">
 							<select
 								onChange={(event) => setRegion(event.target.value)}
@@ -135,7 +143,14 @@ export function Results({ initialCountries }: Props) {
 				</div>
 			</div>
 			<div className="flex flex-col flex-1 items-center w-full">
-				{countries && countries.length === 0 ? (
+				{error && countries.length === 0 ? (
+					<div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 my-auto p-4 py-6 rounded-lg ring-1 ring-red-200 dark:ring-red-800 w-full max-w-[90%] lg:max-w-[100%] text-center">
+						<p className="mb-4 font-bold text-xl text-red-600 dark:text-red-400">Error Loading Countries</p>
+						<p className="text-red-600 dark:text-red-400 text-lg">
+							{error}. Please try refreshing the page or check your internet connection.
+						</p>
+					</div>
+				) : countries && countries.length === 0 ? (
 					<div className="bg-white dark:bg-slate-900 shadow-md dark:shadow-lg my-auto p-4 py-6 rounded-lg ring-1 ring-slate-900/5 w-full max-w-[90%] lg:max-w-[100%] dark:text-gray-100 text-center">
 						<p className="mb-4 font-bold text-xl">No results found</p>
 						<p className="text-gray-600 dark:text-gray-100 text-lg">
